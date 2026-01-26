@@ -38,7 +38,9 @@ export default function Tarif({ translations }) {
       return (
         <div className="flex flex-col items-center gap-0.5">
           <span className="text-gray-900 text-base leading-none">✓</span>
-          {cell.text && <span className="text-sm text-gray-600">{cell.text}</span>}
+          {cell.text && (
+            <span className="text-sm text-gray-600">{cell.text}</span>
+          )}
         </div>
       );
     }
@@ -47,16 +49,16 @@ export default function Tarif({ translations }) {
       return (
         <div className="flex flex-col items-center gap-0.5">
           <span className="text-gray-400 text-base leading-none">✕</span>
-          {cell.text && <span className="text-sm text-gray-500">{cell.text}</span>}
+          {cell.text && (
+            <span className="text-sm text-gray-500">{cell.text}</span>
+          )}
         </div>
       );
     }
 
     if (cell.type === "soon") {
       return (
-        <span className="text-sm text-gray-500">
-          {legends.soon || "скоро"}
-        </span>
+        <span className="text-sm text-gray-500">{legends.soon || "скоро"}</span>
       );
     }
 
@@ -79,28 +81,30 @@ export default function Tarif({ translations }) {
   return (
     <section id="prices" className="w-full bg-white py-10">
       <div className="max-w-[73.5rem] mx-auto px-6.5">
-        <h2 className=" text-[40px] font-bold mb-23.5 ">
-          {t.title}
-        </h2>
+        <h2 className=" text-[40px] font-bold mb-23.5 ">{t.title}</h2>
 
         <div className="grid gap-8 md:grid-cols-3">
           {/* FREE */}
-          <div className="relative rounded-[24px] bg-white/80 border border-black/5 px-6 py-6.5 min-w-[339px] min-h-[494px] max-w-[339px] max-h-[494px]
-                          shadow-[0_0_40px_rgba(0,0,0,0.4)] transition-shadow backdrop-blur-[20px]"> 
+          <div
+            className="relative rounded-[24px] bg-white/80 border border-black/5 px-6 py-6.5 min-w-[339px] min-h-[494px] max-w-[339px] max-h-[494px]
+                          shadow-[0_0_40px_rgba(0,0,0,0.4)] transition-shadow backdrop-blur-[20px]"
+          >
             <h3 className="text-[40px] font-bold mb-1">{t.plans.free.name}</h3>
 
             <p className="text-sm text-gray-500 mb-2 whitespace-pre-line">
               {t.plans.free.description}
             </p>
             <div className="border border-gray-200 mb-4 "></div>
-            <p className="text-[14px] font-semibold text-gray-800 mb-4 ">{t.included}</p>
+            <p className="text-[14px] font-semibold text-gray-800 mb-4 ">
+              {t.included}
+            </p>
             <ul className="space-y-2 text-[14px] text-gray-800 mb-15 ">
               {t.plans.free.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <Image 
-                    src="/icons/check.png" 
-                    alt="Check" 
-                    width={24} 
+                  <Image
+                    src="/icons/check.png"
+                    alt="Check"
+                    width={24}
                     height={24}
                     className="mr-1  flex-shrink-0"
                   />
@@ -120,24 +124,28 @@ export default function Tarif({ translations }) {
           </div>
 
           {/* PRO (зелёная) */}
-          <div className="relative rounded-[24px] px-6 py-6.5 min-w-[339px] min-h-[494px] max-w-[339px] max-h-[494px]
+          <div
+            className="relative rounded-[24px] px-6 py-6.5 min-w-[339px] min-h-[494px] max-w-[339px] max-h-[494px]
                           bg-gradient-to-br from-[#10A547] via-[#3FC764] to-[#99E83F]
                           shadow-[0_0_40px_rgba(0,0,0,0.4)] transition-shadow
-                          text-white">
+                          text-white"
+          >
             <h3 className="text-[40px] font-bold mb-1">{t.plans.pro.name}</h3>
 
             <p className="text-sm text-white/90 mb-2 whitespace-pre-line">
               {t.plans.pro.description}
             </p>
             <div className="border border-gray-200 mb-4 "></div>
-            <p className="text-[14px] font-semibold text-white mb-4">{t.included}</p>
+            <p className="text-[14px] font-semibold text-white mb-4">
+              {t.included}
+            </p>
             <ul className="space-y-2 text-[14px] text-white mb-5 px-1">
               {t.plans.pro.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <Image 
-                    src="/icons/check.png" 
-                    alt="Check" 
-                    width={24} 
+                  <Image
+                    src="/icons/check.png"
+                    alt="Check"
+                    width={24}
                     height={24}
                     className="mr-1  flex-shrink-0 brightness-0 invert"
                   />
@@ -160,22 +168,28 @@ export default function Tarif({ translations }) {
           </div>
 
           {/* PRO+ */}
-          <div className="relative rounded-[24px] bg-white/80 border border-black/5 px-6 py-6.5 min-w-[339px] min-h-[494px] max-w-[339px] max-h-[494px]
-                          shadow-[0_0_40px_rgba(0,0,0,0.4)] transition-shadow backdrop-blur-[20px]">
-            <h3 className="text-[40px] font-bold mb-1">{t.plans.proPlus.name}</h3>
+          <div
+            className="relative rounded-[24px] bg-white/80 border border-black/5 px-6 py-6.5 min-w-[339px] min-h-[494px] max-w-[339px] max-h-[494px]
+                          shadow-[0_0_40px_rgba(0,0,0,0.4)] transition-shadow backdrop-blur-[20px]"
+          >
+            <h3 className="text-[40px] font-bold mb-1">
+              {t.plans.proPlus.name}
+            </h3>
 
             <p className="text-sm text-gray-500 mb-2 whitespace-pre-line">
               {t.plans.proPlus.description}
             </p>
             <div className="border border-gray-200 mb-4 "></div>
-            <p className="text-[14px] font-semibold text-gray-800 mb-4">{t.included}</p>
+            <p className="text-[14px] font-semibold text-gray-800 mb-4">
+              {t.included}
+            </p>
             <ul className="space-y-2 text-[14px] text-gray-800 mb-5 px-1">
               {t.plans.proPlus.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <Image 
-                    src="/icons/check.png" 
-                    alt="Check" 
-                    width={24} 
+                  <Image
+                    src="/icons/check.png"
+                    alt="Check"
+                    width={24}
                     height={24}
                     className="mr-1  flex-shrink-0"
                   />
@@ -229,7 +243,7 @@ export default function Tarif({ translations }) {
             className="relative w-full max-w-5xl bg-white rounded-xl shadow-2xl mx-4"
             onClick={(e) => e.stopPropagation()}
           >
-              {/* Title */}
+            {/* Title */}
             <div className="text-center pt-8 pb-6">
               <h2 className="text-2xl font-semibold text-gray-900">
                 {t.compareModal?.title || t.compareButton}
@@ -241,41 +255,64 @@ export default function Tarif({ translations }) {
               <div className="grid grid-cols-4 gap-0">
                 {/* Empty cell for features column */}
                 <div className="p-4"></div>
-                
+
                 {/* FREE card */}
                 <div className="p-4 text-center">
                   <div className="flex items-center flex-row gap-2 justify-center border border-black rounded-full w-30 p-2 mx-auto">
-                  <Image src="/icons/lightning.png" alt="Free" width={17} height={18} className="" />
-                    <h3 className="text-lg font-semibold text-gray-900">{t.plans.free.name}</h3>
+                    <Image
+                      src="/icons/lightning.png"
+                      alt="Free"
+                      width={17}
+                      height={18}
+                      className=""
+                    />
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {t.plans.free.name}
+                    </h3>
                   </div>
                   <p className="text-2xl font-bold text-gray-900 mb-2 mt-4">
-                    <span className="text-sm font-normal text-gray-500">{t.plans.free.price}</span>
+                    <span className="text-sm font-normal text-gray-500">
+                      {t.plans.free.price}
+                    </span>
                   </p>
-             
                 </div>
 
                 {/* PRO card */}
                 <div className="p-4 text-center border-x border-gray-200 bg-gray-50/50 rounded-t-lg ">
                   <div className="flex items-center flex-row gap-2 justify-center border border-black rounded-full w-30 p-2 mx-auto">
-                  <Image src="/icons/crown.png" alt="Pro" width={17} height={18} className="" />
-                    <h3 className="text-lg font-semibold text-gray-900">{t.plans.pro.name}</h3>
+                    <Image
+                      src="/icons/crown.png"
+                      alt="Pro"
+                      width={17}
+                      height={18}
+                      className=""
+                    />
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {t.plans.pro.name}
+                    </h3>
                   </div>
                   <p className="text-2xl font-bold text-gray-900 mb-2 mt-4">
                     {t.plans.pro.price}
                   </p>
-               
                 </div>
 
                 {/* PRO+ card */}
                 <div className="p-4 text-center">
                   <div className="flex items-center flex-row gap-2 justify-center border border-black rounded-full w-30 p-2 mx-auto">
-                  <Image src="/icons/crown_fill.png" alt="Pro+" width={17} height={18} className="" />
-                    <h3 className="text-lg font-semibold text-gray-900">{t.plans.proPlus.name}</h3>
+                    <Image
+                      src="/icons/crown_fill.png"
+                      alt="Pro+"
+                      width={17}
+                      height={18}
+                      className=""
+                    />
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {t.plans.proPlus.name}
+                    </h3>
                   </div>
                   <p className="text-2xl font-bold text-gray-900 mb-2 mt-4">
                     {t.plans.proPlus.price}
                   </p>
-                 
                 </div>
               </div>
             </div>
@@ -287,7 +324,9 @@ export default function Tarif({ translations }) {
                   {/* Section header */}
                   <div className="grid grid-cols-4 gap-0 border-b border-gray-100">
                     <div className="p-8">
-                      <h4 className="text-[16px] font-semibold text-gray-900">{section.title}</h4>
+                      <h4 className="text-[16px] font-semibold text-gray-900">
+                        {section.title}
+                      </h4>
                     </div>
                     <div className="p-4"></div>
                     <div className="p-4 border-x border-gray-100 bg-gray-50/30"></div>
@@ -301,7 +340,9 @@ export default function Tarif({ translations }) {
                       className="grid grid-cols-4 gap-0 border-b border-gray-100 hover:bg-gray-50/50 transition-colors"
                     >
                       <div className="p-6 pl-12 flex items-center">
-                        <span className="text-[14px] text-gray-600">{item.label}</span>
+                        <span className="text-[14px] text-gray-600">
+                          {item.label}
+                        </span>
                       </div>
                       <div className="p-6 flex items-center justify-center">
                         {renderCell(item.free)}
