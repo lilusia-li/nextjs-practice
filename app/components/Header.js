@@ -115,7 +115,7 @@ export default function Header({ translations, currentLocale }) {
             </nav>
           </div>
 
-          <div className="-mr-13.5 flex items-center gap-4.5">
+          <div className="flex items-center gap-4.5">
             <button
               onClick={() => switchLocale(currentLocale === "kz" ? "ru" : "kz")}
               className="px-2.5 py-1.5 max-w-[38px] max-h-[32px] -mt-1 -mr-0.5   text-[15px] font-normal transition-colors text-green-600 rounded-lg border-[1.5px] border-green-600 justify-center cursor-pointer items-center flex"
