@@ -1,6 +1,7 @@
 import { translations, defaultLocale } from "@/lib/i18n";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import Tarifs from "../components/Tarifs";
 import Stats from "../components/Stats";
 import Features from "../components/Features";
 import PlatformFeatures from "../components/PlatformFeatures";
@@ -21,6 +22,7 @@ export default async function HomePage({ params }) {
         <div className="relative overflow-hidden">
           <Hero translations={t} />
         </div>
+        <Tarifs translations={t} />
         <Stats translations={t} />
         <PlatformFeatures translations={t} />
 
