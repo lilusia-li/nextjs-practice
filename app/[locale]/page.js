@@ -25,13 +25,13 @@ export default async function HomePage({ params }) {
         <Tarifs translations={t} />
         <Stats translations={t} />
         <PlatformFeatures translations={t} />
-
+        {/* 
         <Features translations={t} />
         <Tarif translations={t} />
         <FAQ translations={t} />
         <AutomationBroadcasts translations={t} />
 
-        <StartSellingCTA translations={t} />
+        <StartSellingCTA translations={t} /> */}
       </main>
       <Footer translations={t} currentLocale={currentLocale} />
     </div>
