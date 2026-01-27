@@ -80,12 +80,18 @@ export default function Tarifs({ translations }) {
                     })}
                   </ul>
                   <button
-                    className={`min-h-[52px]  min-w-[222px] max-w-[222px] text-white font-medium text-[16px] rounded-lg outline outline-${data.outlineColor} outline-[0.5px] outline-offset-4`}
+                    className={`min-h-[52px] max-w-[222px] w-full text-white font-medium text-[16px] rounded-lg outline outline-${data.outlineColor} outline-[0.5px] outline-offset-4`}
                     style={{
                       background: data.buttonColor,
                     }}
                   >
-                    {t.plans[data.tarif].button}
+                    <a
+                      href={`./new-page`}
+                      rel="noopener noreferrer"
+                      className="w-full h-full flex justify-center items-center px-4 py-2"
+                    >
+                      {t.plans[data.tarif].button}
+                    </a>
                   </button>
                 </div>
 
