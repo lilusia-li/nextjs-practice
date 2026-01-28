@@ -7,20 +7,20 @@ export default function Tarifs({ translations }) {
     {
       tarif: "turbo",
       buttonColor: "linear-gradient(90deg, #11A550 0%, #99E83F 100%)",
-      outlineColor: "lime-500",
+      outlineColor: "#73D40A",
       pictureCrs: "/rocket2.png",
-      pictureSize: 291,
-      pictureOffsetTop: 20,
-      pictureOffsetRight: 22,
+      pictureSize: "291",
+      pictureOffsetTop: "5",
+      pictureOffsetRight: "5",
     },
     {
       tarif: "standart",
       buttonColor: "black",
       outlineColor: "black",
       pictureCrs: "/check.png",
-      pictureSize: 279,
-      pictureOffsetTop: 18,
-      pictureOffsetRight: 20,
+      pictureSize: "279",
+      pictureOffsetTop: "4.5",
+      pictureOffsetRight: "5.2",
     },
   ];
 
@@ -39,7 +39,6 @@ export default function Tarifs({ translations }) {
               <div
                 key={data.tarif}
                 className=" max-w-[39.4rem] w-full max-h-[32.7rem] h-full relative overflow-hidden px-[2.187rem] pt-[1.875rem] pb-[1.312rem]   border-[1.5px] rounded-3xl border-gray-200"
-                style={{ contain: "layout" }}
               >
                 <h3 className="mb-2 font-bold text-[40px] max-lg:text-[30px]">
                   {t.plans[data.tarif].name}
@@ -80,8 +79,10 @@ export default function Tarifs({ translations }) {
                     })}
                   </ul>
                   <button
-                    className={`min-h-[52px] max-w-[222px] w-full text-white font-medium text-[16px] rounded-lg outline outline-${data.outlineColor} outline-[0.5px] outline-offset-4`}
+                    className={`min-h-[52px] max-w-[222px] w-full text-white font-medium text-[16px] rounded-lg `}
                     style={{
+                      outline: `0.5px solid ${data.outlineColor}`,
+                      outlineOffset: "4px",
                       background: data.buttonColor,
                     }}
                   >
@@ -103,7 +104,11 @@ export default function Tarifs({ translations }) {
                   alt=""
                   width={data.pictureSize}
                   height={data.pictureSize}
-                  className={`absolute -top-${data.pictureOffsetTop} -right-${data.pictureOffsetRight} `}
+                  style={{
+                    position: "absolute",
+                    top: `-${data.pictureOffsetTop}rem`,
+                    right: `-${data.pictureOffsetRight}rem`,
+                  }}
                 />
               </div>
             );
