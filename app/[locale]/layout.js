@@ -5,6 +5,11 @@ import "../globals.css";
 const sfProDisplay = localFont({
   src: [
     {
+      path: "../../fonts/SF-Pro-Display-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
       path: "../../fonts/SF-Pro-Display-Regular.otf",
       weight: "400",
       style: "normal",
@@ -40,8 +45,16 @@ export async function generateMetadata({ params }) {
     description: translations[locale]?.hero?.description || "",
     icons: {
       icon: [
-        { url: "/favicon/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-        { url: "/favicon/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+        {
+          url: "/favicon/favicon-32x32.png",
+          type: "image/png",
+          sizes: "32x32",
+        },
+        {
+          url: "/favicon/favicon-16x16.png",
+          type: "image/png",
+          sizes: "16x16",
+        },
         { url: "/favicon/favicon.ico" },
       ],
       apple: [
@@ -76,10 +89,7 @@ export default async function LocaleLayout({ children, params }) {
 
   return (
     <html lang={currentLocale}>
-      <body className={`${sfProDisplay.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${sfProDisplay.variable} antialiased`}>{children}</body>
     </html>
   );
 }
-

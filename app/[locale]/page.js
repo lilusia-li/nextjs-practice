@@ -10,6 +10,7 @@ import FAQ from "../components/FAQ";
 import AutomationBroadcasts from "../components/AutomationBroadcasts";
 import StartSellingCTA from "../components/StartSellingCTA";
 import Footer from "../components/Footer";
+import Statistic from "../components/Statistic";
 export default async function HomePage({ params }) {
   const { locale } = await params;
   const currentLocale = locale || defaultLocale;
@@ -23,12 +24,13 @@ export default async function HomePage({ params }) {
           <Hero translations={t} />
         </div>
         <Tarifs translations={t} />
-        {/* <Stats translations={t} />
-        <PlatformFeatures translations={t} /> */}
-        {/* 
+        <Statistic translations={t} />
+        {/* <Stats translations={t} /> */}
+        {/* <PlatformFeatures translations={t} /> */}
+
         <Features translations={t} />
-        <Tarif translations={t} />
-        <FAQ translations={t} />
+        {/* <Tarif translations={t} /> */}
+        {/* <FAQ translations={t} />
         <AutomationBroadcasts translations={t} />
 
         <StartSellingCTA translations={t} /> */}
