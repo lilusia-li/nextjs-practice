@@ -23,8 +23,8 @@ export default async function HomePage({ params }) {
           <Hero translations={t} />
         </div>
         <Tarifs translations={t} />
-        <Stats translations={t} />
-        <PlatformFeatures translations={t} />
+        {/* <Stats translations={t} />
+        <PlatformFeatures translations={t} /> */}
         {/* 
         <Features translations={t} />
         <Tarif translations={t} />

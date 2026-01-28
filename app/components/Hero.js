@@ -67,7 +67,7 @@ export default function Hero({ translations }) {
       ></div>
 
       {/* Контейнер для контента */}
-      <div className="max-w-[73.5rem] mx-auto mt-18 px-6.5 relative z-10">
+      <div className="max-w-[83.25rem] mx-auto mt-18 px-6.5 relative z-10">
         {/* Текст и кнопка */}
         <div>
           <h1 className="text-[48px] font-bold text-black mb-8 whitespace-pre-line leading-[1.3]">

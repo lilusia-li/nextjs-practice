@@ -27,7 +27,7 @@ export default function Tarifs({ translations }) {
   return (
     <section
       id="tarifs"
-      className="max-w-[73.5rem] px-6.5 bg-white py-20 mx-auto"
+      className="max-w-[83.25rem] px-6.5 bg-white py-20 mx-auto"
     >
       <div className="relative flex flex-col gap-y-20 max-lg:gap-y-10">
         <h2 className="relative font-bold text-[40px] max-lg:text-[30px]">

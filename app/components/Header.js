@@ -79,7 +79,7 @@ export default function Header({ translations, currentLocale }) {
 
   return (
     <header className="w-full bg-white pt-5 max-h-[75px] pb-4 fixed top-0 left-0 right-0 z-50">
-      <div className="max-w-[73.5rem] mx-auto px-6">
+      <div className="max-w-[83.25rem] mx-auto px-6.5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-80">
             <Link
